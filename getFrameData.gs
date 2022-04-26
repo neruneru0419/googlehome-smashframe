@@ -1,15 +1,14 @@
-function getMarioFrame() {
+function getFrameData() {
   
-
   const spreadsheet = SpreadsheetApp.openById('15SClMwvDIqovtO3DJnf1GGIteH35UX3IM7-mnbdG6eE');
-  const sheet = spreadsheet.getSheetByName('21. マルス');
+  const sheet = spreadsheet.getSheetByName('21\'. ルキナ');
   getCellIntersection("上B", "備考", sheet);
   
 }
 
 function getCellByName(name, sheet){
   for (let row = 1; row <= 140; row++){
-    for (let colmun = 1; colmun <= 7; colmun++){
+    for (let colmun = 1; colmun <= 8; colmun++){
       const cell = sheet.getRange(row, colmun).getValue();
       if (String(cell).includes(name)) return [row, colmun];
       
